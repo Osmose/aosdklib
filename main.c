@@ -169,6 +169,7 @@ unsigned long __stdcall debug_thread(void *param)
 }
 #endif
 
+/*
 int main(int argc, const char *argv[])
 {
 	FILE *file;
@@ -382,3 +383,4 @@ int main(int argc, const char *argv[])
 int change_pc(int foo)
 {
 }
+*/

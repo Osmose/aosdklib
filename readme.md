@@ -1,3 +1,19 @@
+#### AOSDKLib
+This repo contains mild modifications to the Audio Overload SDK to make it
+buildable as a dynamic library on MacOS (and potentially other platforms). The
+changes to make this work are:
+
+1. Commented out the `main` function in `main.c`, since it isn't necessary for
+   a dynamic library, and in fact depends on platform-specific libs for sound
+   playback that don't exist on MacOS.
+2. Added a `build.py` file for running building the dylib file using `gcc` from
+   LLVM. A better C/C++ developer would probably have modified the makefile, but
+   I am an ignorant web developer.
+3. Removed support for the Dreamcast because it appears to depend on Linux-only
+   libraries for MIDI support. I think?
+
+You should be able to run `build.py` and get an `aosdk.dylib` file.
+
 #### Audio Overload SDK - Development Release 1.4.8  February 15, 2009
 
 Copyright (c) 2007-2009 R. Belmont and Richard Bannister.
