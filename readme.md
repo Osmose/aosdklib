@@ -11,6 +11,7 @@ changes to make this work are:
    I am an ignorant web developer.
 3. Removed support for the Dreamcast because it appears to depend on Linux-only
    libraries for MIDI support. I think?
+4. Fix a bug that made certain tag lookups case-sensitive (fixes SaGa Frontier).
 
 You should be able to run `build.py` and get an `aosdk.dylib` file.
 
